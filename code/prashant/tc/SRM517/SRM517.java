@@ -16,8 +16,8 @@ public class SRM517 {
 		board[4]="BBBBBBBB";
 		//System.out.println(s.theMin(board));
 		CompositeSmash s1=new CompositeSmash();
-		System.out.println(s1.primeFactors(81461/2809));
-		System.out.println(s1.chkPrime(29));
+		
+		
 		System.out.println(s1.thePossible(65536, 256));
 		System.out.println(s1.thePossible(517,47));
 		System.out.println(s1.thePossible(8,4));

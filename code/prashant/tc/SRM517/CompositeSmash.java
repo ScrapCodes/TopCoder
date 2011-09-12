@@ -25,7 +25,7 @@ public class CompositeSmash {
 			} else {
 				int p=(int) Math.ceil(Math.sqrt(target));
 				if(PrimeUtil.chkPrime(p)&& p*p==target && N>p*p ){
-					while(N>1)N/=p;
+					while(N%p==0)N/=p;
 					if(N==1){
 						temp=new String("Yes");
 					}

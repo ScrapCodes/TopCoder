@@ -1,6 +1,7 @@
 package prashant.lib;
 
-import java.util.Vector;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Utility class for Prime numbers
@@ -8,20 +9,28 @@ import java.util.Vector;
  * @author prashant
  */
 public class PrimeUtil {
+	
 	/**
-	 * Generate Unique prime factors.
+	 * Generate Unique primeFactors
 	 * 
 	 * @param num
-	 * @return Vector of unique prime factors
+	 * @return empty if no is prime.
 	 */
-	public Vector<Integer> primeFactors(int num) {
-		Vector<Integer> t = new Vector<Integer>();
+	public static Set<Integer> primeFactors(int num) {
+
+		Set<Integer> t = new TreeSet<Integer>();
+		if (num < 2) {
+			// t.add(2);
+			return t;
+		}
 		for (int i = 2; i <= Math.sqrt(num); i++) {
 			if (chkPrime(i)) {
 				if (num % i == 0) {
 					t.add(i);
 					if ((i != num / i) && chkPrime(num / i))
 						t.add(num / i);
+					else
+						t.addAll(primeFactors(num / i));
 				}
 			}
 		}
@@ -32,9 +41,10 @@ public class PrimeUtil {
 	 * Deterministic Prime testing.
 	 * 
 	 * @param num
-	 * @return wether true or false
+	 * @return
 	 */
-	public boolean chkPrime(int num) {
+	public static boolean chkPrime(int num) {
+		if (num==1) return false;
 		if (num == 2 || num == 3)
 			return true;
 		if (num % 2 == 0)
@@ -42,11 +52,10 @@ public class PrimeUtil {
 		else if (num % 3 == 0)
 			return false;
 
-		for (int i = 5; i <= Math.sqrt(num); i += 2) {
+		for (int i = 5; i * i <= num; i += 2) {
 			if (num % i == 0)
 				return false;
 		}
 		return true;
 	}
-
 }

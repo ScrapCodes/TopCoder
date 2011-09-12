@@ -1,6 +1,5 @@
 package prashant.tc.SRM517;
 
-import java.util.Set;
 import prashant.lib.PrimeUtil;
 
 public class CompositeSmash {
@@ -16,7 +15,7 @@ public class CompositeSmash {
 		String temp = new String("No");
 		// If target is prime. N should be divisible by target. which means
 		// target is always achievable.
-		Set<Integer> t1;
+		
 		if (N % target == 0) {
 			if (N == target) {
 				temp = new String("Yes");

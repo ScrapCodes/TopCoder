@@ -1,4 +1,4 @@
-package prashant.tc;
+package prashant.tc.SRM517;
 
 public class MonochromaticBoard {
 	public boolean chkelement(String ele) {

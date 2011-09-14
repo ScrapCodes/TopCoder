@@ -1,6 +1,5 @@
 package prashant.tc.SRM518;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class LargestSubsequence {
@@ -9,7 +8,7 @@ public class LargestSubsequence {
 				return s;
 			char []temp=s.toCharArray();
 			Arrays.sort(temp);
-			ArrayList<String> x=new ArrayList<String>();
+//			ArrayList<String> x=new ArrayList<String>();
 			StringBuilder l1=new StringBuilder();
 			int k=0;
 			for(int i=(s.length()-1);i>=0;i--){

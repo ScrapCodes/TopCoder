@@ -6,7 +6,7 @@ public class TwiceString {
 		char []temp=new char[101];
 		temp=s.toCharArray();
 		char []temp2=new char[101];
-		//temp2=s.toCharArray();
+
 		int j=0;
 		int i=0;
 		for (i=1;i<s.length();i++)

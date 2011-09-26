@@ -22,7 +22,7 @@ public class WhichDay {
 			}
 		} catch (Exception e) {
 		}
-		String s1 = new String();
+//		String s1 = new String();
 		return s2[i];
 	}
 }

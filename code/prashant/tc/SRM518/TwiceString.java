@@ -2,10 +2,10 @@ package prashant.tc.SRM518;
 
 public class TwiceString {
 	public String getShortest(String s) {
-		StringBuilder newString=new StringBuilder(s);
+//		StringBuilder newString=new StringBuilder(s);
 		char []temp=new char[101];
 		temp=s.toCharArray();
-		char []temp2=new char[101];
+//		char []temp2=new char[101];
 
 		int j=0;
 		int i=0;

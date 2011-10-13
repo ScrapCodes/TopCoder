@@ -43,6 +43,5 @@ public class ThreeTeleports {
 	private int mindist(int x1, int y1, int x2, int y2) {
 		return y2;
 		
-		//return mindist(x1,y1,)+dtele;
 	}
 }
